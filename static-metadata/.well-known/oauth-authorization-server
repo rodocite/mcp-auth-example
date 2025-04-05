@@ -1,0 +1,5 @@
+{
+  "authorization_endpoint": "http://localhost:5556/dex/auth",
+  "token_endpoint": "http://localhost:5556/dex/token",
+  "jwks_uri": "http://localhost:5556/dex/keys"
+}

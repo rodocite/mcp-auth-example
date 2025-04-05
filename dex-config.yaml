@@ -1,0 +1,33 @@
+issuer: http://localhost:5556/dex
+
+storage:
+  type: memory
+
+web:
+  http: 0.0.0.0:5556
+
+logger:
+  level: debug
+
+oauth2:
+  skipApprovalScreen: true
+
+staticClients:
+- id: mcp-client
+  redirectURIs:
+  - 'http://localhost:3000/callback'
+  - 'http://localhost:3002/callback'
+  name: 'MCP Client'
+  secret: mcp-client-secret
+
+connectors:
+- type: mockCallback
+  id: mock
+  name: Example
+
+enablePasswordDB: true
+staticPasswords:
+- email: "alice@example.com"
+  hash: "$2a$10$2b2cU8CPhOTaGrs1HRQuAueS7JTT5ZHsHSzYiFPm1leZck7Mc8T4W" # password: password
+  username: "alice"
+  userID: "08a8684b-db88-4b73-90a9-3cd1661f5466" 
